@@ -1,15 +1,22 @@
-# Supervised Classification — Titanic
+# Supervised Classification — Titanic & Heart Disease Prediction
 
-A hands-on Machine Learning project where I applied different **Supervised Classification algorithms** on the Titanic dataset.
+A hands-on Machine Learning project where I applied different **Supervised Classification algorithms** on two datasets: **Titanic** and **Heart Disease**.
 
-The goal of this project was to understand how different classification models learn from the same dataset and predict whether a passenger survived.
+The goal of this project was to understand how different classification models learn from data and predict binary outcomes.
 
-## Dataset
+## Datasets
 
-The project uses the **Titanic dataset**, where the target variable is:
+### Titanic
+The target variable is:
 
 - `Survived = 0` → Did not survive
 - `Survived = 1` → Survived
+
+### Heart Disease
+The target variable is:
+
+- `HeartDisease = 0` → No heart disease
+- `HeartDisease = 1` → Heart disease
 
 ## What I Covered
 
@@ -20,10 +27,11 @@ The project uses the **Titanic dataset**, where the target variable is:
 - Encoding categorical features
 - Feature scaling
 - Train-test split
+- Stratified train-test splitting
 
 ### Classification Models
 
-The models implemented in the project are:
+The following models were implemented and compared:
 
 - Logistic Regression
 - K-Nearest Neighbors (KNN)
@@ -31,11 +39,11 @@ The models implemented in the project are:
 - Decision Tree
 - Support Vector Machine (SVM)
 
-All models are implemented and compared in **one notebook/file** using the same dataset and preprocessing workflow.
+The models were trained and evaluated separately on both datasets.
 
 ## Model Evaluation
 
-The models are evaluated using classification metrics such as:
+The models were evaluated using:
 
 - Accuracy
 - Precision
@@ -43,29 +51,31 @@ The models are evaluated using classification metrics such as:
 - F1-Score
 - Confusion Matrix
 
-This helps understand how well each model performs and how their predictions differ.
+This helped me understand the performance and differences between various classification algorithms.
 
 ## Workflow
 
 ```text
-Titanic Dataset
-      ↓
+Dataset
+   ↓
 EDA
-      ↓
+   ↓
 Data Cleaning
-      ↓
+   ↓
 Preprocessing
-      ↓
-Train-Test Split
-      ↓
-      ├── Logistic Regression
-      ├── KNN
-      ├── Naive Bayes
-      ├── Decision Tree
-      └── SVM
-              ↓
-          Predictions
-              ↓
-          Evaluation
-              ↓
-       Model Comparison
+   ↓
+Encoding & Scaling
+   ↓
+Stratified Train-Test Split
+   ↓
+   ├── Logistic Regression
+   ├── KNN
+   ├── Naive Bayes
+   ├── Decision Tree
+   └── SVM
+          ↓
+      Predictions
+          ↓
+       Evaluation
+          ↓
+     Model Comparison
